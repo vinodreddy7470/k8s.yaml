@@ -1,0 +1,16 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job
+spec:
+  template:
+    metadata:
+      name: annu
+    spec:
+      containers:
+        - name: image
+          image: alpine:latest
+          command:
+            - sleep
+            - 10s
