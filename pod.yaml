@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vinod
+spec:
+  containers:
+    - name: vinod
+      image: alpine:latest
