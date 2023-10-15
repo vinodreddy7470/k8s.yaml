@@ -1,24 +1,27 @@
 ---
 apiVersion: batch/v1
-Kind: CronJob
+kind: CronJob
 metadata:
-  name: cronjob
+  name: vinod
 spec:
   schedule: '* * * * *'
-  jobTemplate:
+  jobTemplate: 
     metadata:
-      name: containers
+      name: vinod1
     spec:
+      backoffLimit: 2
       template:
         metadata:
-          name: vinod
+          name: vinod22
         spec:
+          restartPolicy: OnFailure
           containers:
-            - name: vinod
+            - name: vinod77
               image: ubuntu:latest
               command:
                 - sleep
                 - 10s
+      
 
 
 
