@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aws
+  labels:
+    app: vinod
+spec:
+  containers:
+    - name: vinodreddy
+      image: nginx:1.23
+      ports:
+        - containerPort: 80
+      
