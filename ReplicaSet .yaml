@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: vinod
+  labels:
+    app: nginx
+    layer: web
+    version: "1.23"
+spec:
+  minReadySeconds: 5
+  replicas: 7
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      name: annu
+      labels:
+        app: nginx
+        version: "1.23"
+    spec:
+      containers:
+        - name: vinod1
+          image: nginx:1.23
+          ports:
+            - containerPort: 80
+    
