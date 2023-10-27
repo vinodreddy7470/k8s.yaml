@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annu
+spec:
+  containers:
+    - name: vinod
+      image: alpine:latest
+      command:
+        - sleep
+        - 1d
